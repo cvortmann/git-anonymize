@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+main() {
+
+git filter-branch --env-filter '
+export GIT_AUTHOR_EMAIL="anonymous"
+export GIT_AUTHOR_NAME="anonymous"
+' -- --all
+
+}
+
+main
